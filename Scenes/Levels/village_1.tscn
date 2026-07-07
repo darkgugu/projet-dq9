@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bxd64mdqdr4f7"]
 
 [ext_resource type="PackedScene" uid="uid://deh33xd2ox6rn" path="res://Scenes/Characters/Player/Player.tscn" id="1_jl0wk"]
-[ext_resource type="PackedScene" uid="uid://bdt5m3mqf5e7" path="res://Scenes/Levels/Cactus.tscn" id="1_taajf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wjkq2"]
 resource_name = "grass"
@@ -57,8 +56,6 @@ mesh = SubResource("ArrayMesh_58v1n")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/base/StaticBody3D2" unique_id=1368466177]
 shape = SubResource("ConcavePolygonShape3D_03axu")
-
-[node name="StaticBody3D" parent="terrain" unique_id=1146663686 instance=ExtResource("1_taajf")]
 
 [node name="Environment" type="Node3D" parent="." unique_id=1715941640]
 
