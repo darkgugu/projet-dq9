@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="StatistiquesMonstre" format=3 uid="uid://mwb885jnv8jj"]
+
+[ext_resource type="Script" uid="uid://bwiplc6kibvc1" path="res://Scripts/Resources/StatistiqueMonstre.gd" id="1_2tdyb"]
+
+[resource]
+script = ExtResource("1_2tdyb")
+nom = "Chien"
+pv_max = 50
+attaque = 10

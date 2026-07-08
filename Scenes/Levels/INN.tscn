@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dcjgn052lon1s"]
+
+[ext_resource type="PackedScene" uid="uid://deh33xd2ox6rn" path="res://Scenes/Characters/Player/Player.tscn" id="1_xh6ew"]
+[ext_resource type="Script" uid="uid://iutc78k61obk" path="res://Scripts/Resources/script_porte.gd" id="2_wty3e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0rfx6"]
+size = Vector3(4.295044, 6.362793, 3.6923828)
+
+[node name="INN" type="Node3D" unique_id=1965645819]
+
+[node name="player" type="Node3D" parent="." unique_id=431165219]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="CharacterBody3D" parent="player" unique_id=243802960 groups=["Player"] instance=ExtResource("1_xh6ew")]
+
+[node name="Node3D2" type="Node3D" parent="." unique_id=1501370892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0715294, 6.457346)
+
+[node name="Camera3D" type="Camera3D" parent="Node3D2" unique_id=852188336]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1448369222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.027491)
+script = ExtResource("2_wty3e")
+destination_spawn_name = "inn"
+village_scene_path = "uid://bxd64mdqdr4f7"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=81428371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2720337, 2.6813965, -1.3461914)
+shape = SubResource("BoxShape3D_0rfx6")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1908484773]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.933602, 0, -0.012172222)
+
+[node name="test" type="Marker3D" parent="Node3D" unique_id=2040963537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9025626, 0, 5.2955465)

@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://br3c2atpeauia"]
+
+[ext_resource type="Script" uid="uid://6giix1uwpxpv" path="res://Scripts/Resources/spawn_manager.gd" id="1_5etwn"]
+[ext_resource type="PackedScene" uid="uid://c4gehexyofj24" path="res://Scenes/Characters/Monsters/Goblin/Goblin.tscn" id="1_7gf66"]
+[ext_resource type="PackedScene" uid="uid://deh33xd2ox6rn" path="res://Scenes/Characters/Player/Player.tscn" id="2_7gf66"]
+[ext_resource type="Script" uid="uid://b47i37ney8osj" path="res://Scripts/Resources/toggle_combat.gd" id="2_xojpl"]
+[ext_resource type="Resource" uid="uid://6x3rsit58cwl" path="res://Data/Monsters/Gobelin.tres" id="3_ekudf"]
+[ext_resource type="Script" uid="uid://fkoea0tujmr5" path="res://Scripts/Resources/camera.gd" id="3_xojpl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wjkq2"]
+resource_name = "grass"
+cull_mode = 2
+albedo_color = Color(0.172549, 0.847059, 0.721569, 1)
+metallic = 0.5
+roughness = 0.09607843
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_e2a3g"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1e-05, 1),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 3, 0, 2, 0, 1, 0),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_58v1n"]
+resource_name = "Mesh"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1e-05, 1),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 96, 12, 255, 255, 96, 12),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 3, 0, 2, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_wjkq2"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(39.37008, 41.37008, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 0, 0, 255, 255, 255, 63, 255, 255, 0, 0, 255, 255, 255, 63, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_e2a3g")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_03axu"]
+data = PackedVector3Array(-0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5)
+
+[sub_resource type="Environment" id="Environment_0rfx6"]
+ambient_light_color = Color(0.68307734, 0.6830774, 0.68307734, 1)
+ambient_light_energy = 0.3
+
+[node name="prairie" type="Node3D" unique_id=2034527177]
+
+[node name="terrain" type="Node3D" parent="." unique_id=419349147]
+
+[node name="sol" type="MeshInstance3D" parent="terrain" unique_id=1360296198]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+mesh = SubResource("ArrayMesh_58v1n")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="terrain/sol" unique_id=422772138]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/sol/StaticBody3D2" unique_id=1368466177]
+shape = SubResource("ConcavePolygonShape3D_03axu")
+
+[node name="Environment" type="Node3D" parent="." unique_id=1715941640]
+
+[node name="soleil" type="DirectionalLight3D" parent="Environment" unique_id=1497859918]
+transform = Transform3D(1, 0, 0, 0, 0.8864413, 0.46284103, 0, -0.46284103, 0.8864413, 0, 20.218025, 24.826061)
+shadow_enabled = true
+shadow_bias = 0.03
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=1689928804]
+environment = SubResource("Environment_0rfx6")
+
+[node name="Buildings" type="Node3D" parent="." unique_id=810372078]
+
+[node name="NPCs" type="Node3D" parent="." unique_id=1264146971]
+
+[node name="Monster" type="Node3D" parent="NPCs" unique_id=1371766330]
+
+[node name="Gobelin" parent="NPCs/Monster" unique_id=1557152054 instance=ExtResource("1_7gf66")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, -7.549296)
+
+[node name="Area3D" parent="NPCs/Monster/Gobelin" index="2" unique_id=1720638305]
+script = ExtResource("2_xojpl")
+donnees_monstre = ExtResource("3_ekudf")
+
+[node name="SpawnPoints" type="Node3D" parent="." unique_id=665369028]
+script = ExtResource("1_5etwn")
+
+[node name="PlayerSpawn" type="Marker3D" parent="SpawnPoints" unique_id=244549348]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.34219742, 9.104187)
+
+[node name="Player" type="Node3D" parent="." unique_id=1601935334]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="CharacterBody3D" parent="Player" unique_id=243802960 groups=["Player"] instance=ExtResource("2_7gf66")]
+
+[node name="Camera" type="Node3D" parent="." unique_id=585378609 node_paths=PackedStringArray("target")]
+script = ExtResource("3_xojpl")
+target = NodePath("../Player/CharacterBody3D")
+
+[node name="Camera3D" type="Camera3D" parent="Camera" unique_id=333840426]
+transform = Transform3D(1, 0, 0, 0, 0.4455771, 0.89524364, 0, -0.89524364, 0.4455771, 0, 14.228563, 5.616581)
+
+[editable path="NPCs/Monster/Gobelin"]

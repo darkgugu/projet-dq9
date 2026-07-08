@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StatistiquesMonstre" format=3 uid="uid://bhoqhrwgl6cuh"]
+
+[ext_resource type="Script" uid="uid://bwiplc6kibvc1" path="res://Scripts/Resources/StatistiqueMonstre.gd" id="1_vb0fm"]
+
+[resource]
+script = ExtResource("1_vb0fm")
+nom = "Cactus"
+pv_max = 60
+attaque = 3
+defense = 9
