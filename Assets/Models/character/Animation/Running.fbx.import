@@ -3,7 +3,7 @@
 importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
-uid="uid://biys80jdgvbfq"
+uid="uid://dktpiua6jbsmy"
 path="res://.godot/imported/Running.fbx-119a4883c43f260e8df7e767c9b11f9e.res"
 
 [deps]
@@ -43,9 +43,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://Assets/Models/character/Animation/run.res",
+"save_to_file/fallback_path": "res://Assets/Models/character/Animation/Running.res",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://b1j6abagk1b8o",
+"save_to_file/path": "uid://bwcfup5e3ycpi",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

@@ -3,13 +3,13 @@
 importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
-uid="uid://dpdt8ffh5yvkh"
-path="res://.godot/imported/Happy Idle.fbx-05c035adffa890304100382af91b9bbd.res"
+uid="uid://dpqpk7qktonji"
+path="res://.godot/imported/Idle.fbx-e257558104e8c8d9faa430cd32800b9a.res"
 
 [deps]
 
-source_file="res://Assets/Models/character/Animation/Happy Idle.fbx"
-dest_files=["res://.godot/imported/Happy Idle.fbx-05c035adffa890304100382af91b9bbd.res"]
+source_file="res://Assets/Models/character/Animation/Idle.fbx"
+dest_files=["res://.godot/imported/Idle.fbx-e257558104e8c8d9faa430cd32800b9a.res"]
 
 [params]
 
@@ -43,9 +43,9 @@ _subresources={
 "animations": {
 "mixamo_com": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://Assets/Models/character/Animation/idle.res",
+"save_to_file/fallback_path": "res://Assets/Models/character/Animation/Idle.res",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://c17fsy1nhpiv",
+"save_to_file/path": "uid://bg5gbxs26x3k7",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
