@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StatistiquesMonstre" format=3 uid="uid://6x3rsit58cwl"]
+
+[ext_resource type="Script" uid="uid://bwiplc6kibvc1" path="res://Scripts/Resources/StatistiqueMonstre.gd" id="1_2tdyb"]
+
+[resource]
+script = ExtResource("1_2tdyb")
+nom = "Gobelin"
+pv_max = 40
+attaque = 20
+defense = 2

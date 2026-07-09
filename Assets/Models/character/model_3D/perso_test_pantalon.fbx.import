@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://qgg0aumgqqnf"
-path="res://.godot/imported/lowpoly_male_base_mesh-TPOSE.fbx-2116b4320f71ff576b9326c32c74e501.scn"
+uid="uid://pwy08d4n65h7"
+path="res://.godot/imported/perso_test_pantalon.fbx-de61ebbbee9788ea19408c2800f65cb9.scn"
 
 [deps]
 
-source_file="res://Assets/Models/character/model_3D/lowpoly_male_base_mesh-TPOSE.fbx"
-dest_files=["res://.godot/imported/lowpoly_male_base_mesh-TPOSE.fbx-2116b4320f71ff576b9326c32c74e501.scn"]
+source_file="res://Assets/Models/character/model_3D/perso_test_pantalon.fbx"
+dest_files=["res://.godot/imported/perso_test_pantalon.fbx-de61ebbbee9788ea19408c2800f65cb9.scn"]
 
 [params]
 

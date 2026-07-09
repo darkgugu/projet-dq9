@@ -220,7 +220,7 @@ bind/57/pose = Transform3D(-13.158485, 3.811369, -99.05718, -99.117256, 1.129107
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x8yys"]
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1557152054]
+[node name="Gobelin" type="CharacterBody3D" unique_id=1557152054]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1296477973]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0, 7.285151, 0.77350473)
